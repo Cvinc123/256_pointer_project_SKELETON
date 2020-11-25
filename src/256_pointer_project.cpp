@@ -25,10 +25,14 @@ int main( int argc, char *argv[] )  {
 	   cout<< WRONG_NUMB_ARGS <<endl;
 	   return FAIL_WRONG_NUMBER_ARGS;
 	}
+	string infile = argv[1];
+	string total_mem = argv[2];
+	string results_file = argv[3];
 
 	//TODO get the total memory passed in for use, stoi may come in handy
 	//but its delicate because it expects the string to hold only numbers
-	int total_memory;
+	int total_memory = stoi(total_mem);
+
 
 	//test the memorymanager
 	run_all_tests(argv,total_memory);
